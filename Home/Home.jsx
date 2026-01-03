@@ -2,10 +2,14 @@ import React from 'react'
 import './Home.css'
 import Navbar from '../../components/Navbar/Navbar'
 
-export const Home = () => {
+const Home = () => {
   return (
-    <div className='home'>
+     <div className='home'>
       <Navbar />
     </div>
   )
 }
+
+export default Home
+
+
