@@ -10,10 +10,11 @@ import twitter_icon from '../../assets/twitter_icon.png'
 import instagram_icon from '../../assets/instagram_icon.png'
 import facebook_icon from '../../assets/facebook_icon.png'
 import FAQ from "../../components/FAQ/FAQ";
-import {login, signup} from "../../firebase"
+import netflix_spinner from '../../assets/netflix_spinner.gif'
 
 const Login = () => {
   const [log, setLog] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   function logIn() {
     setLog((prevLog) => !prevLog);
