@@ -8,6 +8,7 @@ import play_icon from "../../assets/play_icon.png";
 import info_icon from "../../assets/info_icon.png";
 import TitleCards from "../../components/TitleCards/TitleCards";
 import Trending from "../../components/TrendingCard/Trending";
+import { ForCards, NewCards, RomanticCards} from '../../assets/cards/Cards_data'
 
 const Home = () => {
   return (
@@ -26,14 +27,14 @@ const Home = () => {
             <button className='btn'><img src={play_icon} alt="" />Play</button>
             <button className='btn dark-btn'><img src={info_icon} alt="" />More Info</button>
           </div>
-          <TitleCards />
+          <TitleCards category={ForCards}/>
         </div>
       </div>
       <div className="more-cards">
         <Trending />
-        <TitleCards title={'Top Pics for You'}/>
-        <TitleCards title={'Upcoming'}/>
-        <TitleCards title={'Blockbuster Movies'}/>
+        <TitleCards title={'Top Pics for You'} category={ForCards}/>
+        <TitleCards title={'New to Netflix'} category={NewCards}/>
+        <TitleCards title={'Romantic TV Shows'} category={RomanticCards}/>
       </div>
       <Footer />
     </div>
