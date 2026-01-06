@@ -54,6 +54,7 @@
 .hero-btns .btn.dark-btn {
     color: #fff;
     background: #6d6d6eb3;
+    cursor: not-allowed;
     transition: all 300ms ease;
 }
 

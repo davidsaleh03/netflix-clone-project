@@ -9,6 +9,7 @@ import info_icon from "../../assets/info_icon.png";
 import TitleCards from "../../components/TitleCards/TitleCards";
 import Trending from "../../components/TrendingCard/Trending";
 import { ForCards, NewCards, RomanticCards} from '../../assets/cards/Cards_data'
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -24,7 +25,9 @@ const Home = () => {
             immortal enemy.
           </p>
           <div className="hero-btns">
+            <Link to={'/player/80dqOwAOhbo'}>
             <button className='btn'><img src={play_icon} alt="" />Play</button>
+            </Link>
             <button className='btn dark-btn'><img src={info_icon} alt="" />More Info</button>
           </div>
           <TitleCards category={ForCards}/>
