@@ -5,12 +5,12 @@ import SignIn from "../../components/SignInUp/SignUp";
 import SignUp from "../../components/SignInUp/SignIn";
 import SignUpBtn from "../../components/SignInUp/SignUpBtn";
 import SignInBtn from "../../components/SignInUp/SignInBtn";
-import youtube_icon from '../../assets/youtube_icon.png'
-import twitter_icon from '../../assets/twitter_icon.png'
-import instagram_icon from '../../assets/instagram_icon.png'
-import facebook_icon from '../../assets/facebook_icon.png'
+import youtube_icon from "../../assets/youtube_icon.png";
+import twitter_icon from "../../assets/twitter_icon.png";
+import instagram_icon from "../../assets/instagram_icon.png";
+import facebook_icon from "../../assets/facebook_icon.png";
 import FAQ from "../../components/FAQ/FAQ";
-import netflix_spinner from '../../assets/netflix_spinner.gif'
+import netflix_spinner from "../../assets/netflix_spinner.gif";
 
 const Login = () => {
   const [log, setLog] = useState(false);
@@ -31,9 +31,9 @@ const Login = () => {
                 <option>English</option>
               </select>
               {log ? (
-                <SignUpBtn onClick={logIn} />
+                <SignUpBtn className="SignBtn" onClick={logIn} />
               ) : (
-                <SignInBtn onClick={logIn} />
+                <SignInBtn className="SignBtn" onClick={logIn} />
               )}
             </div>
           </div>
@@ -73,31 +73,41 @@ You can also download your favorite shows with the iOS or Android app. Use downl
 Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you do not want kids to see."
         />
       </div>
-     <div className='footer'>
-          <div className="footer__icons">
+      <div className="footer">
+        <div className="footer__icons">
+          <a href="https://www.facebook.com/netflix/" target="_blank">
             <img src={facebook_icon} alt="" />
+          </a>
+          <a href="https://www.instagram.com/netflix/" target="_blank">
             <img src={instagram_icon} alt="" />
+          </a>
+          <a href="https://x.com/netflix" target="_blank">
             <img src={twitter_icon} alt="" />
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCWOA1ZGywLbqmigxE4Qlvuw"
+            target="_blank"
+          >
             <img src={youtube_icon} alt="" />
-          </div>
-          <ul className="footer__links">
-            <li>Audio Description</li>
-            <li>Help Center</li>
-            <li>Gift Cards</li>
-            <li>Media Center</li>
-            <li>Investor Relations</li>
-            <li>Jobs</li>
-            <li>Terms of Use</li>
-            <li>Privacy</li>
-            <li>Legal Notices</li>
-            <li>Cookie Preferences</li>
-            <li>Corporate Information</li>
-            <li>Contact Us</li>
-          </ul>
-          <p className="copyright__text">@2025 Netflix, Inc</p>
+          </a>
         </div>
+        <ul className="footer__links">
+          <li>Audio Description</li>
+          <li>Help Center</li>
+          <li>Gift Cards</li>
+          <li>Media Center</li>
+          <li>Investor Relations</li>
+          <li>Jobs</li>
+          <li>Terms of Use</li>
+          <li>Privacy</li>
+          <li>Legal Notices</li>
+          <li>Cookie Preferences</li>
+          <li>Corporate Information</li>
+          <li>Contact Us</li>
+        </ul>
+        <p className="copyright__text">@2025 Netflix, Inc</p>
+      </div>
     </div>
-    
   );
 };
 
